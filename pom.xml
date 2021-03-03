@@ -107,7 +107,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>contextcustom.com</projectName>
+                            <projectName>turo.com</projectName>
                             <outputDirectory>${project.build.directory}/myReports</outputDirectory>
                             <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
                         </configuration>
