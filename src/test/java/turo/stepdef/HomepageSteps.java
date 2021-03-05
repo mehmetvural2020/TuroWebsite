@@ -31,5 +31,7 @@ public class HomepageSteps extends Base {
         String expected = "Turo | The world's largest car sharing marketplace";
         String actual = MyDriver.get().getTitle();
         Assert.assertEquals(expected, actual);
+        logger.info("Turo.com website title is {}", actual);
+
     }
 }

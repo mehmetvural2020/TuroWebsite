@@ -81,6 +81,7 @@ public class Base {
     protected void sendKeysValue(String value, WebElement webElement) {
         webElement.clear();
         webElement.sendKeys(value);
+        logger.info("{} is entered.", value);
     }
 
     protected void selectFromDropDownMenu(String selectText, WebElement dropdownMenu) {
