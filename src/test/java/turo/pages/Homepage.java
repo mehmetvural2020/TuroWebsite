@@ -10,10 +10,10 @@ public class Homepage {
         PageFactory.initElements(MyDriver.get(), this);
     }
 
-    @FindBy(xpath = "//h1[@class=\"seo-pages-100230h-StyledText\"]")
+    @FindBy(xpath = "//p[@class=\"seo-pages-1vnvqu-StyledText\"]")
     public WebElement homepageTitle;
 
-    @FindBy(xpath = "//*[name()='use' and contains(@height,'72')]")
+    @FindBy(xpath = "//a[@title=\"Turo\"]")
     public WebElement logo;
 
     @FindBy(xpath = "//a[normalize-space()='Log in']")
@@ -22,6 +22,9 @@ public class Homepage {
     @FindBy(xpath = "//a[normalize-space()='Sign up']")
     public WebElement signup;
 
-    @FindBy(xpath = "//img[@alt='Liberty Mutual Insurance']")
-    public WebElement insuranceLogo;
+    @FindBy(xpath = "//p[@class=\"seo-pages-1vnvqu-StyledText\"]")
+    public WebElement mainTitle;
+
+//    @FindBy(xpath = "//img[@alt='Liberty Mutual Insurance']")
+//    public WebElement insuranceLogo;
 }

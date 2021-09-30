@@ -40,11 +40,13 @@ public class AdvancedSearchSteps extends Base {
         // adjusting the Years on slider bar
         scrollDown(advancedSearch.yearText);
         Actions move = new Actions(MyDriver.get());
+
         Action actionLeft1 = (Action) move.dragAndDropBy(advancedSearch.leftYearSlider, 430, 0).release().build();
         ((Action) actionLeft1).perform();
 
-        Action actionLeft = (Action) move.dragAndDropBy(advancedSearch.rightYearSlider, -15, 0).release().build();
-        ((Action) actionLeft).perform();
+        move.dragAndDropBy(advancedSearch.rightYearSlider, -15, 0).release().build().perform();
+//        Action actionLeft = (Action) move.dragAndDropBy(advancedSearch.rightYearSlider, -15, 0).release().build();
+//        ((Action) actionLeft).perform();
 
         // selecting Transmission
         select = new Select(advancedSearch.transmission);
@@ -90,10 +92,10 @@ public class AdvancedSearchSteps extends Base {
         click(advancedSearch.viewResult3);
 
         waitSomeTime(2L);
-        click(advancedSearch.distanceButton);
-        click(advancedSearch.distance200miles);
-        waitSomeTime(2L);
-        click(advancedSearch.applyButton1);
+//        click(advancedSearch.distanceButton);
+//        click(advancedSearch.distance200miles);
+//        waitSomeTime(2L);
+//        click(advancedSearch.applyButton1);
     }
 }
 

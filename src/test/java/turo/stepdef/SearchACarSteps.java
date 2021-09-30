@@ -16,10 +16,12 @@ public class SearchACarSteps extends Base {
     @Given("user is on landing page to search")
     public void userIsOnLandingPageToSearch() {
         waitSomeTime(1000L);
-        String expected = "Turo | The world's largest car sharing marketplace";
+        String expected = "Turo | Find the perfect car on the world’s largest car sharing marketplace";
         String actual = MyDriver.get().getTitle();
-        Assert.assertEquals(expected,actual);
-        logger.info("Turo.com website title is {}", actual);
+        verifyTheText(expected,actual);
+
+//        Assert.assertEquals(expected,actual);
+//        logger.info("Turo.com website title is {}", actual);
     }
 
     @And("user enter {string} in Where text box")
@@ -33,7 +35,7 @@ public class SearchACarSteps extends Base {
     public void userSelectAndUnderFrom(String dateFrom, String dateUntil) {
         click(searchACar.startDate);
         waitSomeTime(500L);
-        while (!searchACar.calendar.getText().contains("May 2021")) {
+        while (!searchACar.calendar.getText().contains("December 2021")) {  // We can get today's date from LocalDateTime.
             waitSomeTime(500L);
             click(searchACar.nextMonthClick);
             waitSomeTime(500L);
@@ -60,5 +62,6 @@ public class SearchACarSteps extends Base {
     public void userClicksSearchButton() {
     click(searchACar.searchButton);
     logger.info("User clicked search button.");
+    waitSomeTime(3000L);
     }
 }

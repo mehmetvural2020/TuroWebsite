@@ -10,4 +10,7 @@ Feature: Verifying the Search
 
     Examples:
       | location        | dateFrom | dateUntil |
-      | Los Angeles, CA | 23       | 25        |
+      | Los Angeles, CA | 15       | 21        |
+#      | New York, NY | 23       | 25        |
+#      | Texas, TX | 23       | 25        |
+#      | Florida, FL | 23       | 25        |

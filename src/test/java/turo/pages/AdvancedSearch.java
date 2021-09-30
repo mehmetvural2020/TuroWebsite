@@ -15,7 +15,7 @@ public class AdvancedSearch {
     @FindBy(xpath = "//div[@class='searchFilter desktopMoreFilters']")
     public WebElement moreFiltersButton;
 
-    @FindBy(css = "label[for='allStarHost'] span[class='styledCheckbox-label']")
+    @FindBy(xpath = "//input[@id=\"allStarHost\"]")
     public WebElement allStarHost;
 
     @FindBy(xpath = "//div[@class='searchFilterBar']//div[7]//div[2]//div[1]//span[1]")
